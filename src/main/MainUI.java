@@ -158,21 +158,22 @@ public class MainUI extends javax.swing.JFrame
                     currentCustID = customerID;
                 }
 
-                customerList.add(new CustomerInformation(customerID, customerIC, customerName, null, itemID, itemName, itemPrice, datePurchase));
+                customerList.add(new CustomerInformation(customerID, customerIC, customerName, null, 
+                		                                itemID, itemName, itemPrice, datePurchase));
 
                 line = br.readLine();
             }
             br.close();
 
             //Add to new queue
-            int counterswitching = 1;
+            int stateCounterNumber = 1;
             for (int i = 0; i < listCustID.size(); i++) 
             {
                 List filteredItemCustomer = filterItemDataCust(listCustID.get(i));
 
                 if (filteredItemCustomer.size() <= 5) 
                 {
-                    if (counterswitching == 1) 
+                    if (stateCounterNumber == 1) 
                     {
                         for (int j = 0; j < filteredItemCustomer.size(); j++) 
                         {
@@ -187,9 +188,9 @@ public class MainUI extends javax.swing.JFrame
 
                             main.Main.getCounter1().add(new CustomerInformation(custID, custIC, custName, "counter1", itemID, itemName, itemPrice, datePurchased));
                         }
-                        counterswitching = 2;
+                        stateCounterNumber = 2;
                     }
-                    else if (counterswitching == 2) 
+                    else if (stateCounterNumber == 2) 
                     {
                         for (int j = 0; j < filteredItemCustomer.size(); j++) 
                         {
@@ -205,7 +206,7 @@ public class MainUI extends javax.swing.JFrame
                             main.Main.getCounter2().add(new CustomerInformation(custID, custIC, custName, "counter2", itemID, itemName, itemPrice, datePurchased));
 
                         }
-                        counterswitching = 1;
+                        stateCounterNumber = 1;
                     }
                 } 
                 else 

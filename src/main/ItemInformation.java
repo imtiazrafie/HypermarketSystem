@@ -28,6 +28,32 @@ public class ItemInformation
         this.itemPrice = itemPrice;
     }
     
+    //Mutator/ Setter
+    public void setItemID(String itemID)
+    {
+        this.itemID = itemID;
+    }
+    
+    public void setItemName(String itemName)
+    {
+        this.itemName = itemName;
+    }
+    
+    public void setitemPrice(double itemPrice)
+    {
+        this.itemPrice = itemPrice;
+    }
+    
+    public void setDatePurchase(String datePurchase)
+    {
+        this.datePurchase = datePurchase;
+    }
+    
+    public void setCustID(String custID)
+    {
+        this.custID = custID;
+    }
+    
     //Accessor/ Getter
     public String getItemID()
     {
@@ -53,5 +79,12 @@ public class ItemInformation
     public String getCustID()
     {
         return custID;
+    }
+    
+    //Printer
+    public String toString()
+    {
+        return "Item ID: " + itemID + "\nItem name: " + itemName + "\nPrice: " + 
+        itemPrice + "\nDate purchased: " + datePurchase + "\nCustomer ID: " + custID;
     }
 }

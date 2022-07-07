@@ -31,6 +31,27 @@ public class CustomerInformation
         this.counterPaid = counterPaid;
     }
     
+    //Mutator/ Setter
+    public void setCustID(String custID)
+    {
+        this.custID = custID;
+    }
+    
+    public void setCustIC(String custIC)
+    {
+        this.custIC = custIC;
+    }
+    
+    public void setCustName(String custName)
+    {
+        this.custName = custName;
+    }
+    
+    public void setCounterPaid(String counterPaid)
+    {
+        this.counterPaid = counterPaid;
+    }
+    
     //Accessor/ Getter
     public String getCustID()
     {
@@ -70,7 +91,13 @@ public class CustomerInformation
     
     public String getDatePurchase()
     {
-        return itemInformation.getDatePurchase();
-        
+        return itemInformation.getDatePurchase();  
+    }
+    
+    //Printer
+    public String toString()
+    {
+        return "Customer ID: " + custID + "\nCustomer name: " + custName + "\nCustomer IC: " + custIC + "\nCounter Paid: " + counterPaid + 
+        "\nItem ID: " + getItemID() + "\nItem name: " + getItemName() + "\nPrice: " + getitemPrice() + "\nDate purchased: " + getDatePurchase();
     }
 }
