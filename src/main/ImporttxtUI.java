@@ -13,13 +13,13 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 
-public class MainUI extends javax.swing.JFrame 
+public class ImporttxtUI extends javax.swing.JFrame 
 {
 
     /**
      * Creates new form HomeUI
      */
-    public MainUI() 
+    public ImporttxtUI() 
     {
         initComponents();
         pack();
